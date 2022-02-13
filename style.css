@@ -1,0 +1,147 @@
+body {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	height: 100vh;
+}
+#container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: #c0c0c0;
+	position: relative;
+}
+#menu {
+	margin: 10px auto;
+}
+
+img {
+	width: 50px;
+}
+
+.ul {
+	list-style: none;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	background-color: #c0c0c0;
+}
+
+.li {
+	height: 50px;
+	margin: 0 10px;
+}
+
+.new_game {
+	border: 2px solid gray;
+}
+
+.mines input,
+.score input {
+	margin: auto;
+	width: 100%;
+	text-align: center;
+	font-size: 200%;
+	border: 2px groove white;
+	border-radius: 7%;
+	background-color: black;
+	color: red;
+}
+
+.cell {
+	width: 50px;
+	height: 50px;
+	display: flex;
+	align-items: center;
+	flex-direction: row;
+	justify-content: center;
+	border: 3px outset rgb(238 238 238);
+
+	box-sizing: border-box;
+	font-weight: bolder;
+	font-size: 45px;
+	color: rgb(100, 98, 98);
+}
+
+#content {
+	display: flex;
+	flex-direction: column;
+	border-style: inset;
+	background-color: #c0c0c0;
+}
+.line {
+	display: flex;
+	flex-direction: row;
+}
+
+.invise {
+	background-image: url(bomb1.png);
+	background-repeat: no-repeat;
+}
+
+.boom {
+	background-color: red;
+}
+
+.cool {
+	border: 1px solid rgb(154 154 154);
+}
+
+.flag {
+	background-color: yellow;
+}
+
+@keyframes fullScale {
+	from {
+		transform: scale(0);
+	}
+	to {
+		transform: scale(1);
+	}
+}
+@keyframes fullBack {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+.shading {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	background-color: rgba(0, 0, 0, 0.5);
+	animation: fullBack 200ms linear 1 normal;
+}
+
+.win {
+	display: flex;
+	flex-direction: column;
+
+	align-items: center;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+}
+.congrat {
+	z-index: 3;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin-top: 100px;
+	padding: 10px;
+	background-color: rgb(245, 236, 224);
+	border-radius: 10px;
+	box-shadow: 0px 0px 9px 5px rgba(34, 60, 80, 0.4);
+	animation: fullScale 200ms cubic-bezier(0.24, 1.78, 1, 0.56) 1 normal;
+}
+.winner {
+	color: rgba(8, 245, 28, 0.692);
+	font-size: 32px;
+}
+button {
+	border-radius: 5px;
+}
