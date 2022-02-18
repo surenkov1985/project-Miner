@@ -1,1 +1,1 @@
-# project-Miner
+https://mich-man.ru/projects/miner/
